@@ -73,7 +73,7 @@ def find_landmass(grid):
                 largest_size.append(size)
                 results.append((Landmasses, size, features))
               
-    biggest_size = max(largest_size)
+    biggest_size = max(largest_size) if largest_size else 0
     return Landmasses , biggest_size , results
 
    
@@ -90,11 +90,16 @@ def main():
 
     grid = read_map(map_file)
     landmass_count, biggest_size, results   = find_landmass(grid)
+
+
     print("#############################################")
     print("Reese Blackman: Island Challenge Report")
     print("#############################################\n")
     print(f"Total landmasses of {Path(map_file[:4])}: {landmass_count}")
     print(f"Largest landmass size: {biggest_size}\n")
+
+
+    
     for landmass, size, features in results:
         print(f"Landmass {landmass} size: {size}")
         for feature, count in features.items():

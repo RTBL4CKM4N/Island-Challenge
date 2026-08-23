@@ -1,9 +1,4 @@
-Introduction
-This programming challenge is intended to provide an enjoyable opportunity for you to demonstrate your ability to solve a software problem.
 
-While there is no set time limit for completing the challenge, it is anticipated that the task should take no more than 2-3 hours.
-
-We hope you find it a fun and interesting challenge as well as a useful way to demonstrate some of your software development skills.
 Problem description
 The challenge is to develop a software application that is able to calculate and output information about features of a provided map.
 
@@ -76,7 +71,3 @@ Summary of what to provide:
 1.	Zip file containing source code (including Visual Studio Solution files)
 2.	Zip file containing a built and functioning executable
 3.	Short description of how you solved the problem
-
-What if your application fails/produces an incorrect result?
-If your application fails to run or produces an incorrect result, this does not necessarily mean that you will be excluded from the recruitment process.
-The description of how you attempted to solve the problem will be used alongside any provided source code to allow us to assess how you approached the problem.
