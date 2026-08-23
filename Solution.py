@@ -33,30 +33,49 @@ def find_landmass(grid):
    
     visit = set()
     Landmasses = 0 
+    largest_size = []
+    
 
     def bfs (r,c): 
+            features = {
+                "+": 0,
+                "*": 0,
+                "^": 0,
+                "@": 0
+            }
+            size = 0
             queue = collections.deque()
             queue.append((r,c))
             visit.add((r,c))
 
             while queue:
                 r,c = queue.popleft()
+                size += 1
+                features[grid[r][c]] += 1
                 for dr, dc in Neighbours:
                     nr, nc = r + dr, c + dc
                     if 0 <= nr < height and 0 <= nc < width and grid[nr][nc] in Landmass and (nr,nc) not in visit:
                         visit.add((nr,nc))
                         queue.append((nr,nc))
-
-
-    for r in range (height):
+            return size, features
+    for r in range(height):
         for c in range(width):
-        
             if grid[r][c] in Landmass and (r,c) not in visit:
-                
-                bfs(r,c)
-                Landmasses += 1
-    return Landmasses
+                size, features = bfs(r,c)
+                Landmasses += 1 
+                largest_size.append(size)
+                biggest_size = max(largest_size)
+                print(f"Landmass {Landmasses} size: {size}")
+                for feature, count in features.items():
+                    if count > 0:
+                        print(f"  {Feature_names[feature]}: {count}")
+                print("\n")
+              
 
+    return Landmasses , biggest_size
+
+   
+     
 def main():
     if len(sys.argv) != 2:
         print("Usage: python Solution.py <map_file>")
@@ -68,8 +87,9 @@ def main():
         sys.exit(1)
 
     grid = read_map(map_file)
-    landmass_count = find_landmass(grid)
+    landmass_count, biggest_size = find_landmass(grid)
     print(f"Number of landmasses: {landmass_count}")
+    print(f"Biggest size of all landmasses: {biggest_size}")
 
 
 
