@@ -47,27 +47,3 @@ Output
 The output from your application can be either to the console, a separate text file or to a GUI display.
 
 The output should contain your name and state the number of landmasses that are in the map input file.
-
-An example output from the application on the console may look like:
-
-The task will be considered complete if the correct number of detected landmasses is shown in the output.
-
-Although this is not required to complete the task, additionally you may include any other information that you have calculated, for example the number of each landmass characters in each detected landmass. 
-
-Feel free to be creative!
-Programming Languages and Development Environments
-The task must be completed in Windows using any version of Microsoft Visual Studio or Microsoft Visual Studio Community edition.
-
-The task can be completed using any of the programming languages that can be compiled using this development environment, however, preference will be given to candidates that complete the task using C++.
-
-Microsoft Visual Studio Community edition can be downloaded and used free of charge from the following location https://visualstudio.microsoft.com/vs/community/
-
-What to Provide
-When you have completed the challenge please provide all of the source code that you have written in a zip file. This should include the Visual Studio solution files to allow the source files to be unzipped and built in Visual Studio easily.
-Please also provide a compiled executable for your application in a separate zip file. This will be run and tested against some map files to see if your application correctly solves the problem.
-In addition please provide a short description of the method/algorithm you designed to solve the problem.
-
-Summary of what to provide:
-1.	Zip file containing source code (including Visual Studio Solution files)
-2.	Zip file containing a built and functioning executable
-3.	Short description of how you solved the problem
